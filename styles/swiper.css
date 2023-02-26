@@ -1,0 +1,109 @@
+:root {
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+  --swiper-pagination-bullet-inactive-color: #FFFFFF;
+  --swiper-pagination-bullet-width: 6px;
+  --swiper-pagination-bullet-height: 6px;
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+  --swiper-theme-color: #FFFFFF;
+}
+
+.swiper {
+  width: 100%;
+  height: 473px;
+  background-color: #000000;
+  border-radius: 32px;
+  font-family: 'Nekst-Black', sans-serif;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper__box-info {
+  position: relative;
+  max-width: 585px;
+  min-height: 238px;
+  padding: 70px 0 0 70px;
+  z-index: 100;
+}
+
+.swiper__title {
+  font-size: 54px;
+  line-height: 90%;
+}
+
+.swiper__title::first-letter {
+  text-transform: uppercase;
+}
+
+.swiper__text {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 32px 0 24px 0;
+}
+
+.swiper__btn {
+  width: 174px;
+  height: 48px;
+  background-color: #FF9514;
+}
+
+.swiper__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.swiper__progress-bar {
+  position: absolute;
+  right: 44px;
+  bottom: 44px;
+  z-index: 3;
+  width: 88px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swiper__progress-bar button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.swiper__progress-bar button:not(:disabled):hover .swiper__circle-btn {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.swiper__progress-bar button:not(:disabled):active .swiper__circle-btn {
+  fill: rgba(255, 255, 255);
+}
+
+.swiper__progress-bar button:disabled .swiper__circle-btn {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.swiper__progress-bar button:disabled .swiper__svg-arrow {
+  opacity: 0.2;
+}
+
+
+/* Переопределение стилей для SwiperJS */
+.swiper-pagination {
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+}

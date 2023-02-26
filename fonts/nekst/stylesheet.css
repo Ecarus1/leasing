@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Nekst-Black';
+  src: local('Nekst-Black'),
+       url('Nekst-Black.otf');
+  font-weight: 900;
+  font-style: normal;
+}

@@ -1,0 +1,105 @@
+.btn {
+  display: grid;
+  place-items: center;
+
+  background-color: #FFFFFF;
+  border-radius: 40px;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  border: 0;
+}
+
+.btn span::first-letter {
+  text-transform: uppercase;
+}
+
+.btn-one {
+  border: 1px solid #FF9514;
+  color: #FF9514;
+}
+
+.btn-one:not(:disabled):hover {
+  background-color: #FF9514;
+  color: #FFFFFF;
+}
+
+.btn-one:not(:disabled):active {
+  background-color: #FFA83D;
+  border: 1px solid #FFA83D;
+  color: #FFFFFF;
+}
+
+.btn-one:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn-two {
+  border: 1px solid #FF9514;
+  background-color: #FF9514;
+  color: #FFFFFF;
+}
+
+.btn-two:not(:disabled):hover {
+  background-color: #111111;
+  border: 1px solid #111111;
+  color: #FFFFFF;
+}
+
+.btn-two:not(:disabled):active {
+  background-color: #575757;
+  border: 1px solid #575757;
+  color: #FFFFFF;
+}
+
+.btn-two:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn-ring__loader {
+  display: inline-block;
+  position: relative;
+  width: 21px;
+  height: 21px;
+}
+.btn-ring__loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #FF9514;
+  border-radius: 50%;
+  animation: btn-ring__loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #FF9514 transparent transparent transparent;
+}
+
+.btn-two-ring__loader div {
+  border: 2px solid #ffffff;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.btn-ring__loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.btn-ring__loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.btn-ring__loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes btn-ring__loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

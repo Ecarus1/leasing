@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LeasingCar</title>
+    <meta name="description" content="Лизинговая компания! Лучшие предложения и проверенные цены. Оформляйте лизинг на новый автомобиль.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/media.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo-box">
+          <svg width="200" height="35" viewBox="0 0 200 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 27.1001H18.6313V21.0779H6.21045V1.88195H0V27.1001Z" fill="#FF9514"/>
+            <path d="M29.2356 7.71601C23.4391 7.71601 19.3741 12.0445 19.3741 17.6904C19.3741 22.9598 22.6864 27.6647 29.1226 27.6647C33.6017 27.6647 37.4785 25.3687 38.683 21.0779H32.6231C32.0209 22.0189 30.4776 22.6211 29.0474 22.5082C26.8643 22.32 25.6222 21.0402 25.2458 19.61H38.7959C39.5487 12.7596 35.5213 7.71601 29.2356 7.71601ZM29.1979 12.8349C31.0422 12.8349 32.5102 13.7006 33.0371 15.2815H25.3211C25.848 13.7759 27.316 12.8349 29.1979 12.8349Z" fill="#FF9514"/>
+            <path d="M54.7842 10.5766H54.6337C53.5045 8.9581 51.4344 7.71601 48.8373 7.71601C43.6807 7.71601 40.1427 11.9692 40.1427 17.7656C40.1427 23.7126 43.9066 27.6647 48.8373 27.6647C51.4344 27.6647 53.5045 26.4226 54.6337 24.8041H54.7842V27.1001H60.5807V8.2806H54.7842V10.5766ZM50.4181 22.1694C47.9339 22.1694 46.052 20.3251 46.052 17.6904C46.052 15.0556 47.9339 13.2113 50.4181 13.2113C52.9399 13.2113 54.7842 15.1309 54.7842 17.6904C54.7842 20.1369 53.0152 22.1694 50.4181 22.1694Z" fill="#FF9514"/>
+            <path d="M68.928 8.2806C65.3147 8.2806 62.4917 10.6519 62.4917 14.077C62.4917 16.6365 64.4866 18.5937 67.2719 19.1959L74.1222 20.6638C74.3857 20.7391 74.461 20.9273 74.461 21.0779C74.461 21.2661 74.3104 21.4543 74.0469 21.4543H63.2822V27.1001H74.0846C77.6979 27.1001 80.5961 24.6912 80.5961 21.2284C80.5961 18.5561 78.6765 16.5612 75.7783 15.9966L69.0409 14.6792C68.8527 14.6416 68.7022 14.4534 68.7022 14.3028C68.7022 14.1146 68.8527 13.9265 69.1162 13.9265H79.2411V8.2806H68.928Z" fill="#FF9514"/>
+            <path d="M82.5095 0V6.21045H88.3436V0H82.5095ZM82.5095 8.2806V27.1001H88.3436V8.2806H82.5095Z" fill="#FF9514"/>
+            <path d="M102.767 7.75365C100.66 7.75365 98.6646 8.69462 97.4226 10.426H97.272V8.2806H91.5885V27.1001H97.4226V17.1634C97.4226 14.8298 99.2292 13.5124 100.961 13.5124C102.504 13.5124 104.122 14.5663 104.122 16.9752V27.1001H109.956V16.1848C109.956 10.6895 107.246 7.75365 102.767 7.75365Z" fill="#FF9514"/>
+            <path d="M126.35 10.5766H126.199C125.07 8.9581 123 7.71601 120.403 7.71601C115.246 7.71601 111.708 11.9692 111.708 17.7656C111.708 23.7126 115.472 27.6647 120.403 27.6647C123 27.6647 125.07 26.4226 126.199 24.8041H126.35V27.5518C126.35 28.3046 125.785 28.7562 124.995 28.7562H114.193V34.6279H126.425C130.039 34.6279 132.146 32.6707 132.146 29.095V8.2806H126.35V10.5766ZM121.984 22.1694C119.5 22.1694 117.618 20.3251 117.618 17.6904C117.618 15.0556 119.5 13.2113 121.984 13.2113C124.506 13.2113 126.35 15.1309 126.35 17.6904C126.35 20.1369 124.581 22.1694 121.984 22.1694Z" fill="#FF9514"/>
+            <path d="M154.223 16.5988C153.546 19.6476 151.062 21.5672 147.712 21.5672C143.308 21.5672 140.937 18.2173 140.937 14.4911C140.937 10.6895 143.346 7.49019 147.636 7.41491C151.062 7.33963 153.358 9.33451 154.073 12.1198H160.509C159.794 6.05991 154.825 1.31738 147.712 1.31738C139.732 1.31738 134.613 7.26436 134.613 14.5663C134.613 21.793 139.732 27.6647 147.712 27.6647C155.014 27.6647 159.944 22.8846 160.584 16.5988H154.223Z" fill="#111111" class="hamburger__line"/>
+            <path d="M176.633 10.5766H176.483C175.354 8.95811 173.284 7.71602 170.687 7.71602C165.53 7.71602 161.992 11.9692 161.992 17.7657C161.992 23.7126 165.756 27.6647 170.687 27.6647C173.284 27.6647 175.354 26.4226 176.483 24.8042H176.633V27.1001H182.43V8.28061H176.633V10.5766ZM172.267 22.1694C169.783 22.1694 167.901 20.3251 167.901 17.6904C167.901 15.0556 169.783 13.2113 172.267 13.2113C174.789 13.2113 176.633 15.1309 176.633 17.6904C176.633 20.1369 174.864 22.1694 172.267 22.1694Z" fill="#111111" class="hamburger__line"/>
+            <path d="M195.323 8.28061C193.403 8.28061 191.86 9.40978 191.333 11.1035H191.182V8.28061H185.65V27.1001H191.484V17.5775C191.484 15.5826 192.951 14.1147 194.946 14.1147H199.501V8.28061H195.323Z" fill="#111111" class="hamburger__line"/>
+            </svg>
+            
+
+          <hr class="header__vertical-line">
+          <span class="header__text">лизинговая компания</span>
+        </div>
+
+        <div class="background" id="background"></div>
+        
+        <button class="header__hamburger" id="hamburger-btn">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1_3304)">
+            <path d="M5.33331 8H26.6666" stroke="black" class="hamburger__line" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.33331 16H26.6666" stroke="black" class="hamburger__line" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.33331 24H21.3333" stroke="black" class="hamburger__line" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1_3304">
+            <rect width="32" height="32" fill="white"/>
+            </clipPath>
+            </defs>
+          </svg>
+        </button>
+
+        <div class="header__links-box" id="navpanel">
+          <button class="header__close" id="header-close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.5996 9.40039L9.40028 22.5997" stroke="black" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.40039 9.40039L22.5997 22.5997" stroke="black" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <nav class="header__navigate">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#" class="header__link header__link-dropdown">лизинг</a>
+                <ul class="header__list dropdown">
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">для личного пользования</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">для юридических лиц</a></li>
+                  <li class="dropdown__item"><a class="dropdown__link" href="#">калькулятор</a></li>
+                </ul>
+              </li>
+              <li class="header__item"><a href="#" class="header__link">каталог</a></li>
+              <li class="header__item"><a href="#" class="header__link">о нас</a></li>
+            </ul>
+          </nav>
+
+          <button class="btn btn-one header__btn" id="header-btn"><span>оставить заявку</span></button>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper__box-info">
+                <h1 class="swiper__title">авто в лизинг для физических лиц</h1>
+                <p class="swiper__text">получите машину за 5 дней</p>
+  
+                <button class="btn btn-two swiper__btn"><span>оставить заявку</span></button>
+              </div>
+              <img class="swiper__img" src="/assets/swiper/car.jpg" alt="Машина" title="Машина">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper__box-info">
+                <h2 class="swiper__title">авто в лизинг для физических лиц (h2)</h2>
+                <p class="swiper__text">получите машину за 5 дней</p>
+  
+                <button class="btn btn-two swiper__btn" disabled><span>оставить заявку</span></button>
+              </div>
+              <img class="swiper__img" src="/assets/swiper/car.jpg" alt="Машина" title="Машина">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper__box-info">
+                <h2 class="swiper__title">авто в лизинг для физических лиц (h2)</h2>
+                <p class="swiper__text">получите машину за 5 дней</p>
+
+                <div class="swiper__btn-box-box">
+                  <div class="swiper__btn-box-pos">
+                    <div class="btn-ring__loader btn-two-ring__loader"><div></div><div></div><div></div><div></div></div>
+                  </div>
+                  <button class="btn btn-two swiper__btn"></button>
+                </div>
+              </div>
+              <img class="swiper__img" src="/assets/swiper/car.jpg" alt="Машина" title="Машина">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper__box-info">
+                <h2 class="swiper__title">авто в лизинг для физических лиц (h2)</h2>
+                <p class="swiper__text">получите машину за 5 дней</p>
+  
+                <button class="btn btn-two swiper__btn"><span>оставить заявку</span></button>
+              </div>
+              <img class="swiper__img" src="/assets/swiper/car.jpg" alt="Машина" title="Машина">
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper__box-info">
+                <h2 class="swiper__title">авто в лизинг для физических лиц (h2)</h2>
+                <p class="swiper__text">получите машину за 5 дней</p>
+  
+                <button class="btn btn-two swiper__btn"><span>оставить заявку</span></button>
+              </div>
+              <img class="swiper__img" src="/assets/swiper/car.jpg" alt="Машина" title="Машина">
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper__progress-bar">
+            <button class="swiper__btn-target" id="prevSlide">
+              <svg width="24" height="24" role="button" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path d="M43.5 28L39.5 32L43.5 36" opacity="0.4" class="swiper__svg-arrow"  transform="matrix(1 0 0 1 -30 -20)" stroke="white" stroke-width="2"/>
+                  <circle class="swiper__circle-btn" opacity="0.4" cx="12" cy="12" r="11" transform="matrix(-1 0 0 1 24 0)" stroke="white" stroke-width="2"/>
+                </g>
+              </svg>
+            </button>
+
+            <button class="swiper__btn-target" id="nextSlide">
+              <svg width="50" height="50" role="button" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path class="swiper__svg-arrow" d="M52 37L60 45L52 53" transform="matrix(1 0 0 1 -30 -20)" stroke="white" stroke-width="2"/>
+                  <circle class="swiper__circle-btn" opacity="0.4" cx="25" cy="25" r="24" stroke="white" stroke-width="2"/>
+                  <circle id="circle" cx="25" cy="25" r="24" stroke="white" stroke-width="2" transform="translate(25 25) rotate(-90) translate(-25 -25)"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+        <form class="calculator" id="calc-form">
+          <span class="calculator__title">расчитайте стоимость автомобиля в лизинг</span>
+          
+          <div class="calc-list">
+            <div class="calc-list__item">
+              <span class="calc-list__title">стоимоть автомобиля</span>
+
+              <div class="calc-list__box">
+                <input class="calc-list__input" type="text" id="rangenumber1" value="3 300 000" oninput="range1.value=value" name="money">
+
+                <span class="calc-list__currency">₽</span>
+              </div>
+
+              <input class="calc-list__range" type="range" value="3300000" min="1000000" max="6000000" step="10000" id="range1" oninput="rangenumber1.value=value">
+            </div>
+
+            <div class="calc-list__item">
+              <span class="calc-list__title">первоначальный взнос</span>
+
+              <div class="calc-list__box">
+                <input class="calc-list__input" type="text" id="rangenumber2" value="429 000" name="peyment">
+                <div class="calc-list__square">
+                  <span class="calc-list__currency calc-list__percent" id="percent-span">13%</span>
+                </div>
+              </div>
+
+              <input class="calc-list__range" type="range" value="13" min="10" max="60" id="range2">
+            </div>
+
+            <div class="calc-list__item">
+              <span class="calc-list__title">срок лизинга</span>
+
+              <div class="calc-list__box">
+                <input class="calc-list__input" type="number" id="rangenumber3" min="1" max="60" value="60" name="term" oninput="range3.value=value">
+
+                <span class="calc-list__currency">мес.</span>
+              </div>
+
+              <input class="calc-list__range" type="range" value="60" min="1" max="60" id="range3" oninput="rangenumber3.value=value">
+            </div>
+          </div>
+
+          <div class="calc-list calc-list-two">
+            <div class="calc-list__item calc-list__item-two">
+              <span class="calc-list__title">сумма договора лизинга</span>
+              <span class="calc-list__money" id="sum-contract-span">4 467 313 ₽</span>
+            </div>
+
+            <div class="calc-list__item calc-list__item-two">
+              <span class="calc-list__title">ежемесячный платёж от</span>
+              <span class="calc-list__money" id="monthly">114 455 ₽</span>
+            </div>
+
+            <div class="calc-list__item calc-list__item-two position-btn">
+              <button type="submit" class="btn btn-two calc-list__btn"><span>оставить заявку</span></button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <div class="form" id="form">
+      <button class="form__close" id="form-close">
+        <img class="form__img-close" src="/assets/circle-close.svg" alt="close" title="close">
+      </button>
+
+      <form class="form__box" id="form-data">
+        <div class="form-info">
+          <h3 class="form-info__title">онлайн-заявка</h3>
+          <p class="form-info__text">заполните форму, и мы вскоре свяжемся с вами, чтобы ответить на все вопросы</p>
+        </div>
+
+        <div class="form-fields">
+          <div class="form-fields__box">
+            <input class="form-fields__input" type="text" name="phone" id="phone" required>
+            <label class="form-fields__lable" for="phone" id="phone-lable">телефон <span class="form-fields__simbol">*</span></label>
+
+            <div class="form-fields__done" id="form-fields__done">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="8" fill="#77DE8D"/>
+                <g clip-path="url(#clip0_0_1)">
+                <path d="M7.33337 11.9998L10.6667 15.3332L17.3334 8.6665" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_0_1">
+                <rect width="16" height="16" fill="white" transform="translate(4 4)"/>
+                </clipPath>
+                </defs>
+                </svg>                
+            </div>
+          </div>
+
+          <div class="form-fields__box">
+            <input class="form-fields__input" type="text" name="username" id="username" required>
+            <label class="form-fields__lable" for="username">имя</label>
+            <span class="form-fields__error-text" id="username-span">Текст ошибки</span>
+          </div>
+        </div>
+
+        <div class="form-submiting">
+          <div class="form-submiting__box">
+            <p class="form-submiting__text">Нажимая на кнопку «Оставить заявку», я даю согласие <span class="form-submiting__imp"> на обработку персональных данных</span></p>
+          </div>
+
+          <button type="submit" class="btn btn-two form-submiting__btn" id="submit"><span>оставить заявку</span></button>
+        </div>
+
+        <nav class="form-nav">
+          <ul class="form-nav__list">
+            <li class="form-nav__item">
+              <a class="form-nav__link" target="_blank" href="index.html"><img src="/assets/whatsapp.svg" alt="whatsapp" title="whatsapp"></a>
+            </li>
+            <li class="form-nav__item">
+              <a class="form-nav__link" target="_blank" href="index.html"><img src="/assets/telegram.svg" alt="telegram" title="telegram"></a>
+            </li>
+          </ul>
+        </nav>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js" integrity="sha512-CMuWpLFXT32GBKUW/9880UbFC2t/1SkCqRZXSIGXFp9lmmFhBuHP6ENqenghA1qEzN3fHPXGGx0arvs3JQ6MNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script defer src="/js/swiper.js"></script>
+    <script defer src="/js/range.js"></script>
+    <script defer src="/js/hamburger.js"></script>
+    <script defer src="/js/form.js"></script>
+  </body>
+</html>
